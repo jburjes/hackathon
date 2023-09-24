@@ -1,28 +1,35 @@
-from taipy.gui import Gui
+from taipy.gui import Gui, navigate
 from pages.about import about_md
-from pages.locations.locations import locations_md
+from pages.locations.locations import *
+from pages.locations.atkins import atkins_md
+from pages.locations.baton_rouge import baton_rouge_md
 
 
 # Definition of the page
 # Add a navbar to switch from one page to the other
 root_md = """
-<center>
-# Flood Data Visualization </center>
 
+# HydrOracle: Flood Data Visualization 
 <|navbar|>
 
 
 """
-
-page2_md = """
-
-
-
-"""
+     
+def on_menu(state, var_name, function_name, info):
+    page = info['args'][0]
+    navigate(state, to=page)
+    
 
 pages = {
     "/": root_md,
     "About": about_md,
-    "Locations": locations_md
+    "Atkins": atkins_md,
+    "Baton-rouge": baton_rouge_md
+    
 }
-Gui(pages=pages).run()
+gui = Gui(pages=pages)
+
+
+partial_atkins = gui.add_partial(atkins_md)
+
+gui.run()
