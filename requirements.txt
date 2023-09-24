@@ -1,6 +1,6 @@
 alabaster
 alembic==1.12.0
-anaconda-client==1.11.0
+anaconda-client
 anaconda-navigator==2.3.2
 aniso8601==9.0.1
 anyio
