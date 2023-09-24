@@ -42,8 +42,6 @@ pages = {
     "Memphis": memphis_md,
     "Royalton": royalton_md,
     "St-Louis": st_louis_md 
-=======
-    "Baton-rouge": baton_rouge_md
 
     
 }
