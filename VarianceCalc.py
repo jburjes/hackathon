@@ -1,5 +1,7 @@
-def findVariance(datalist):
-    Variances={}
+import statistics
+import math
+def findSD(datalist):
+    SD={}
     vals=[]
     for i in range(len(datalist)):
         days=0
@@ -9,6 +11,6 @@ def findVariance(datalist):
                 vals.append(int(datalist[i][j][1]))
             except:
                 continue
-        Variances[2013+i] = statistics.variance(vals)
+        SD[2013+i] = math.sqrt(statistics.variance(vals))
         vals=[]
-    return Variances
+    return SD
