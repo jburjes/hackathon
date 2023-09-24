@@ -32,6 +32,7 @@ pages = {
     "/": root_md,
     "About": about_md,
     "Atkins": atkins_md,
+
     "Baton-rouge": baton_rouge_md,
     "Belle-Chase": belle_chase_md,
     "Brooklyn-Park": brooklyn_park_md,
@@ -41,6 +42,9 @@ pages = {
     "Memphis": memphis_md,
     "Royalton": royalton_md,
     "St-Louis": st_louis_md 
+=======
+    "Baton-rouge": baton_rouge_md
+
     
 }
 gui = Gui(pages=pages)
