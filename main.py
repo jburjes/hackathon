@@ -1,6 +1,7 @@
 __name__ == '__main__'
 from taipy.gui import Gui
 from pages.about import about_md
+
  
 
 # Definition of the page
@@ -87,6 +88,12 @@ data9 = {"Year":[x for x in result9.keys()], "Standard deviation of discharge":[
 st_louis_md="""
 <|{data9}|chart|x=Year|y=Standard deviation of discharge|>  
 """                 
+
+predictions_md = """
+
+tba
+
+"""
 pages = {
     "/": root_md,
     "About": about_md,
@@ -99,9 +106,10 @@ pages = {
     "Grand-Rapids": grand_rapids_md,
     "Memphis": memphis_md,
     "Royalton": royalton_md,
-    "St-Louis": st_louis_md 
+    "St-Louis": st_louis_md,
+    "Predictions": predictions_md
 
-    
+
 }
 
 
@@ -109,5 +117,3 @@ gui = Gui(pages=pages)
 
 gui.run()
 
-if __name__ == '__main__':
-    main()
